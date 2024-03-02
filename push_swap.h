@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 15:39:10 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/02/28 20:14:59 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/02 17:40:06 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,9 @@ t_stack  *ft_get_number(char *av,t_stack *stack);
 
 t_stack *list_new(int value);
 // t_stack ft_back_front(t_stack **stack, int i);
-void ft_add_back(t_stack **stack, int i);
-t_stack	*ft_stacklast(t_stack **stack);
+// t_stack *ft_add_back(t_stack *stack, int i);
+// t_stack	*ft_stacklast(t_stack **stack);
+t_stack *ft_add_back(t_stack *stack, int i);
 
 // for sort
 

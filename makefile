@@ -6,7 +6,7 @@ CC = cc
 SRC = main.c\
 	parsing.c\
 	utils_check.c\
-	stack_utils.c\
+	utils_parsing.c\
 	swap.c\
 	push.c\
 	rotate.c\

@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 15:39:19 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/02/28 18:38:45 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/02 18:21:11 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int ft_check_digit(char **av)
         n = ft_atoi_swap(av, &i);
         if (check_duplicate(stack, n))
             exit(EXIT_FAILURE);
-        stack = ft_back_front(stack, n);
+        stack = ft_add_back(stack, n);
         while (av[i] == ' ' || (av[i] >= 9 && av[i] <= 13))
             i++;
     }

@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 15:39:15 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/02/28 18:34:44 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/02 19:02:06 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,21 @@ int main (int argc, char *argv[])
     }
     else 
         printf("OK\n");
-    stack_a = ft_parsing(argv, &stack_a);
+    // stack_a = ft_parsing(argv, &stack_a);
     printf("OK\n");
     print_stack(&stack_a);
     printf("\n\n");
     // rotate(&stack_a);
-    // r_reverse(&stack_a)
+    // r_reverse(&stack_a);
     // ft_swap(&stack_a);
-    ft_push(&stack_a,&stack_b);
+    // do_pa(&stack_a,&stack_b);
     print_stack(&stack_a);
-    printf("\n");
-    print_stack(&stack_b);
-    
+    // printf("\n");
+    // print_stack(&stack_b);
+    // do_pa(&stack_b,&stack_a);
+    // print_stack(&stack_a);
+    // printf("\n");
+    // print_stack(&stack_b);
 
     return (0);
 }
