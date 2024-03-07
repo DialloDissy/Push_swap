@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 16:58:01 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/03/02 19:01:46 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:56:40 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ void r_reverse(t_stack **stack)
     t_stack *current;
     t_stack *before_bottom;
 
-    
+    if (!stack || !(*stack) || !(*stack)->next)
+        return;
     current = *stack;
     while (current->next != NULL)
     {
@@ -57,7 +58,7 @@ void r_reverse(t_stack **stack)
     before_bottom->next = NULL;
     current->next = *stack;
     *stack = current;
-    printf("============\n");
+
 }
 
 

@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 17:10:19 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/02/27 21:43:04 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:47:32 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void ft_swap(t_stack  **stack)
     t_stack *tmp;
     t_stack *swap;
     
-    
+    if (!stack || !(*stack) || !(*stack)->next)
+        return;
     tmp = *stack;
     swap = (*stack)->next;
     

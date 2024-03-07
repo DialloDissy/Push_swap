@@ -5,12 +5,17 @@ CC = cc
 
 SRC = main.c\
 	parsing.c\
+	utils_sort.c\
 	utils_check.c\
 	utils_parsing.c\
 	swap.c\
 	push.c\
 	rotate.c\
 	r_reverse.c\
+	large_sort.c\
+	sort.c\
+	pushing_b_into_a.c\
+	refreshing.c\
 	
 
 
