@@ -64,11 +64,4 @@ void	free_stack(t_stack **stack)
 		free(tmp);
 	}
 
-	// if (!(*stack))
-	// 	return ;
-	// while (*stack)
-	// {
-	// 	free(*stack);
-	// 	*stack = (*stack)->next;
-	// }
 }

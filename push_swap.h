@@ -28,7 +28,6 @@ typedef struct s_stack
 	bool			cheapest;
 
 	struct s_stack	*next;
-	struct s_stack 	*previous;
 	struct s_stack	*target;
 
 }					t_stack;
@@ -45,9 +44,6 @@ t_stack				*ft_get_number(char *av, t_stack *stack);
 char				**join_arg_solo(int ac, char **av);
 
 t_stack				*list_new(int value);
-// t_stack ft_back_front(t_stack **stack, int i);
-// t_stack *ft_add_back(t_stack *stack, int i);
-// t_stack	*ft_stacklast(t_stack **stack);
 t_stack				*ft_add_back(t_stack *stack, int i);
 void	free_stack(t_stack **stack);
 void	ft_forfree_init(char **strf, int i);

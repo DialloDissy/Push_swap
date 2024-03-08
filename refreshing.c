@@ -16,7 +16,6 @@
 void	the_cheapest(t_stack *stack_b)
 {
 
-	// on recupere le cost le moins cher.
 	int				cheap;
 	t_stack	*current_cheap;
 
@@ -49,11 +48,7 @@ void	cost_stack(t_stack *stack_a, t_stack *stack_b)
 	len_b = stack_len(stack_b);
 	while (stack_b)
 	{
-        // calculer les couts, le calcule pour trouver la mediane est pour au dessus(true)  
-        // = egale a l’index et en dessous = len de la stack - l’index de a la stack.
-		// pourtrouver lecoup le plus faible selon le node 
 		stack_b->cost = stack_b->index;
-		// si la le node est en dessous de la mediane on fait la len de b - l'index de b
 		if (!(stack_b->above_median))
 			stack_b->cost = len_b - stack_b->index;
 		if (stack_b->target->above_median)
@@ -77,10 +72,6 @@ void	refresh_target(t_stack *stack_a, t_stack *stack_b)
 		current_a = stack_a;
 		while (current_a)
 		{
-            // choisir la cible→ chercher la target cad que le noeud de 
-            // la stack b va chercher une cible dans la stack_a; chercher 
-            // le plus grand et plus proche de  stack_a, 
-            // sinon sa target sera le plus petit cibler →fonction pour cibler
 			if (current_a->value > stack_b->value && current_a->value < best_match)
 			{
 				best_match = current_a->value;

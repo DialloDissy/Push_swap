@@ -15,9 +15,13 @@
 char **join_arg_solo(int ac, char **av)
 {
 	char **tab;
+
 	if (ac > 2)
+	{
+		tab = av;
+		av++;
 		return(av);
-		
+	}	
 	tab = ft_split(av[1], ' ');
 	return(tab);
 }
@@ -32,19 +36,16 @@ int	main(int argc, char *argv[])
 	stack_b = NULL;
 	if (argc < 2)
 		return (0);
-	arg = join_arg_solo(argc,argv);	
+	arg = join_arg_solo(argc,argv);
 	if (!ft_parsing(arg, &stack_a))
 	{   
 		if (argc == 2)
 			ft_forfree_init(arg, argc);
 		if(stack_a)
 			free_stack(&stack_a);
-		printf("Error swap\n");
+		printf("Error\n");
 		return (0);
 	}
-	// else
-	//     free(arg);
-	// 	printf("OK\n");
 	if (!is_sorted(stack_a))
 	{
 		sort(&stack_a, &stack_b);

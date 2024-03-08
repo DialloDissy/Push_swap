@@ -38,7 +38,6 @@ int	stack_len(t_stack *stack)
 	return (i);
 }
 
-// trouver la plus grande valeur de la stack
 t_stack	*find_max(t_stack *stack)
 {
 	int		max;
@@ -63,7 +62,6 @@ t_stack	*find_max(t_stack *stack)
 	return (higher);
 }
 
-// trouver la plus petite valeur
 t_stack	*find_min(t_stack *stack)
 {
 	int min;

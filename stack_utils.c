@@ -13,25 +13,6 @@
 
 #include "push_swap.h"
 
-// t_stack botom_stack(t_stack *stack_a)
-// {
-//     t_stack *pos;
-//     t_stack *new_stack;
-    
-//     if(stack_a == NULL )
-//     {
-//         stack_a =  malloc(sizeof(t_stack));
-//         stack_a = NULL;
-//     }
-//     while(stack_a->next != NULL)
-//     {
-//         malloc(sizeof(t_stack));
-//         stack_a = stack_a->next;
-//     }
-    
-//     return(*pos);
-// }
-
 t_stack *list_new(int value)
 {
     t_stack *new_stack;
@@ -45,16 +26,6 @@ t_stack *list_new(int value)
     return(new_stack);
     
 }
-// t_stack ft_back_front(t_stack *stack, int i)
-// {
-//     t_stack *new;
-    
-
-//     new = list_new(i);
-//     new->next = stack;
-    
-//     return(*new);
-// }
 
 void ft_add_back(t_stack **stack, int i)
 {
