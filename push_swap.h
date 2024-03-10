@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 15:39:10 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/03/07 19:07:41 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:22:55 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "./libft/libft.h"
-# include <limits.h> //pas autoriser
+# include <limits.h>
 # include <stdbool.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -37,7 +37,7 @@ typedef struct s_stack
 t_stack				*ft_parsing(char **argv, t_stack **stack);
 int					ft_issign(int c);
 long long			ft_atoi_swap(const char *nptr, int *pos);
-long long	ft_atoi_sign(const char *nptr, int *pos);
+long long			ft_atoi_sign(const char *nptr, int *pos);
 int					ft_check_digit(char **av);
 int					check_duplicate(t_stack *stack_a, int nbr);
 t_stack				*ft_get_number(char *av, t_stack *stack);
@@ -45,9 +45,8 @@ char				**join_arg_solo(int ac, char **av);
 
 t_stack				*list_new(int value);
 t_stack				*ft_add_back(t_stack *stack, int i);
-void	free_stack(t_stack **stack);
-void	ft_forfree_init(char **strf, int i);
-
+void				free_stack(t_stack **stack);
+void				ft_forfree_init(char **strf, int i);
 
 // for sort
 

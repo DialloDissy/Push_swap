@@ -6,17 +6,15 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 19:54:19 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/03/07 17:42:42 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:33:36 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
 void	the_cheapest(t_stack *stack_b)
 {
-
-	int				cheap;
+	int		cheap;
 	t_stack	*current_cheap;
 
 	cheap = stack_b->cost;
@@ -36,8 +34,6 @@ void	the_cheapest(t_stack *stack_b)
 		stack_b = stack_b->next;
 	}
 }
-
-
 
 void	cost_stack(t_stack *stack_a, t_stack *stack_b)
 {
@@ -59,12 +55,11 @@ void	cost_stack(t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
-
 void	refresh_target(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*current_a;
-	t_stack *target;
-	long			best_match;
+	t_stack	*target;
+	long	best_match;
 
 	while (stack_b)
 	{
@@ -72,7 +67,8 @@ void	refresh_target(t_stack *stack_a, t_stack *stack_b)
 		current_a = stack_a;
 		while (current_a)
 		{
-			if (current_a->value > stack_b->value && current_a->value < best_match)
+			if (current_a->value > stack_b->value
+				&& current_a->value < best_match)
 			{
 				best_match = current_a->value;
 				target = current_a;
@@ -86,9 +82,6 @@ void	refresh_target(t_stack *stack_a, t_stack *stack_b)
 		stack_b = stack_b->next;
 	}
 }
-
-
-
 
 void	refresh_index(t_stack *stack)
 {
@@ -110,8 +103,6 @@ void	refresh_index(t_stack *stack)
 		i++;
 	}
 }
-
-
 
 void	refreshing(t_stack *stack_a, t_stack *stack_b)
 {

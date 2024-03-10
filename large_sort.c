@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:01:33 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/03/07 18:49:53 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:30:09 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	sort_big(t_stack **stack_a, t_stack **stack_b)
 {
 	int	len_stack_a;
 	int	median;
-	 //pour trouver la mediane on calcule la valeur min - la valeur max de la stack /2 
+
 	len_stack_a = stack_len(*stack_a);
 	median = ((find_min(*stack_a)->value + find_max(*stack_a)->value) / 2);
 	while (len_stack_a > 3 && !is_sorted(*stack_a))
@@ -88,16 +88,11 @@ void	sort_big(t_stack **stack_a, t_stack **stack_b)
 		push_a_into_b(stack_a, stack_b, median);
 		len_stack_a--;
 	}
-	// sort ma stack de 3
 	three_sort(stack_a);
-	// parcourir ma stack b
 	while (*stack_b)
 	{
-		// refresh chaque iteration;
 		refreshing(*stack_a, *stack_b);
-		// push b dans a
 		push_b_into_a(stack_a, stack_b);
-		
 	}
 	refresh_index(*stack_a);
 	set_the_top(stack_a);

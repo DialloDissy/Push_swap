@@ -6,15 +6,14 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 19:29:05 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/03/07 19:00:29 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:31:55 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// on va gerer les 4 cas  pour push la stack b dans avec le cout et la target.
-
-void	move_both_above_median(t_stack **stack_a, t_stack **stack_b,t_stack *cheapest)
+void	move_both_above_median(t_stack **stack_a, t_stack **stack_b,
+		t_stack *cheapest)
 {
 	while ((cheapest->index != 0 && cheapest->target->index != 0))
 	{
@@ -40,7 +39,8 @@ void	move_both_above_median(t_stack **stack_a, t_stack **stack_b,t_stack *cheape
 	}
 }
 
-void	move_both_under_median(t_stack **stack_a, t_stack **stack_b,t_stack *cheapest)
+void	move_both_under_median(t_stack **stack_a, t_stack **stack_b,
+		t_stack *cheapest)
 {
 	while ((cheapest->index != 0 && cheapest->target->index != 0))
 	{
@@ -66,7 +66,8 @@ void	move_both_under_median(t_stack **stack_a, t_stack **stack_b,t_stack *cheape
 	}
 }
 
-void	move_a_above_and_b_below_median(t_stack **stack_a, t_stack **stack_b,t_stack *cheapest)
+void	move_a_above_and_b_below_median(t_stack **stack_a, t_stack **stack_b,
+		t_stack *cheapest)
 {
 	while (cheapest->index != 0)
 	{
@@ -80,7 +81,8 @@ void	move_a_above_and_b_below_median(t_stack **stack_a, t_stack **stack_b,t_stac
 	}
 }
 
-void	move_a_below_and_b_above_median(t_stack **stack_a, t_stack **stack_b,t_stack *cheapest)
+void	move_a_below_and_b_above_median(t_stack **stack_a, t_stack **stack_b,
+		t_stack *cheapest)
 {
 	while (cheapest->index != 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 15:59:27 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/03/07 19:32:10 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:45:52 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,13 @@ int	check_duplicate(t_stack *stack_a, int nbr)
 	}
 	return (0);
 }
+
 void	free_stack(t_stack **stack)
 {
+	t_stack	*tmp;
+
 	if (!(*stack))
 		return ;
-	t_stack *tmp;
 	tmp = *stack;
 	while (*stack)
 	{
@@ -63,5 +65,4 @@ void	free_stack(t_stack **stack)
 		tmp->next = NULL;
 		free(tmp);
 	}
-
 }

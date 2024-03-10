@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 16:57:57 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/03/06 20:57:58 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:34:08 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,19 @@ void	rotate(t_stack **stack)
 	top->next = tmp;
 	tmp->next = NULL;
 }
+
 void	do_ra(t_stack **stack_a)
 {
 	rotate(stack_a);
 	write(1, "ra\n", 3);
 }
+
 void	do_rb(t_stack **stack_b)
 {
 	rotate(stack_b);
 	write(1, "rb\n", 3);
 }
+
 void	do_rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);

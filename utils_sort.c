@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 17:30:11 by sidiallo          #+#    #+#             */
-/*   Updated: 2024/03/06 20:56:26 by sidiallo         ###   ########.fr       */
+/*   Updated: 2024/03/10 18:45:02 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ t_stack	*find_max(t_stack *stack)
 
 t_stack	*find_min(t_stack *stack)
 {
-	int min;
-	int temp;
-	t_stack *least;
+	int		min;
+	int		temp;
+	t_stack	*least;
 
 	if (!stack)
 		return (NULL);
